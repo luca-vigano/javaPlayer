@@ -57,13 +57,38 @@ public class Main {
 
         Immagine img1 = new Immagine(titoloImg1, luminositaImg1);
 
-        track1.Play();
-        track2.Play();
-        video1.Play();
-        video2.Play();
-        img1.Show();
 
-    ElementoMultimediale[] multimediaArr ={track1, track2, video1, video2, img1};
+        System.out.println("MEDIA PLAYER ");
+        System.out.println("Comandi: 1-2 audio, 3-4 video, 5 img. exit: termina player");
+        System.out.println("Inserisci un comando ");
+
+
+        boolean attivo =true;
+        while (attivo){
+
+            String comando = scanner.nextLine();
+            switch (comando){
+                case "1":
+                    track1.Play();
+                    break;
+                case "2":
+                    track2.Play();
+                    break;
+                case "3":
+                    video1.Play();
+                    break;
+                case "4":
+                    video2.Play();
+                    break;
+                case "5":
+                    img1.Show();
+                    break;
+                case "exit":
+                    attivo=false;
+                    break;
+
+            }
+        }
 
 
     }
