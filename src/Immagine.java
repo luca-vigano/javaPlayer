@@ -1,4 +1,7 @@
-public class Immagine  extends ElementoMultimediale{
+import Interface.Luminosita;
+import Interface.Show;
+
+public class Immagine  extends ElementoMultimediale implements Luminosita, Show {
 
     int luminosita;
 
@@ -9,17 +12,22 @@ public class Immagine  extends ElementoMultimediale{
         this.luminosita=luminosita;
     }
 
-    public void show(){
+    @Override
+    public void Show(){
         System.out.print(this.titolo);
         for(int i = 0; i <this.luminosita; i++){
             System.out.print(" *");
         }
     }
 
-    public void aumentaLuminosita(){
+
+    @Override
+    public void aumentaLuminosita() {
         this.luminosita ++;
     }
-    public void diminuisciLuminosita(){
+
+    @Override
+    public void diminuisciLuminosita() {
         this.luminosita --;
     }
 }

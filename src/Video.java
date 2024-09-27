@@ -1,4 +1,8 @@
-public class Video extends ElementoMultimediale{
+import Interface.Luminosita;
+import Interface.Play;
+import Interface.Volume;
+
+public class Video extends ElementoMultimediale implements Volume, Luminosita, Play {
 
     int durata;
     int volume;
@@ -11,8 +15,8 @@ public class Video extends ElementoMultimediale{
         this.luminosita=luminosita;
     }
 
-
-    public void play() {
+    @Override
+    public void Play() {
         for(int i=0; i < this.durata; i++) {
             System.out.print(this.titolo);
             for (int j = 0; j < this.volume; j++) {
@@ -27,17 +31,27 @@ public class Video extends ElementoMultimediale{
 
     }
 
-    public void abbassaVolume () {
+
+
+
+
+    @Override
+    public void abbassaVolume() {
         this.volume --;
     }
-    public void alzaVolume () {
-        this.volume ++;
-    }
-    public void aumentaLuminosita(){
-        this.luminosita ++;
-    }
-    public void diminuisciLuminosita(){
-        this.luminosita --;
+
+    @Override
+    public void alzaVolume() {
+    this.volume ++;
     }
 
+    @Override
+    public void aumentaLuminosita() {
+        this.luminosita ++;
+    }
+
+    @Override
+    public void diminuisciLuminosita() {
+        this.luminosita --;
+    }
 }

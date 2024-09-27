@@ -1,4 +1,8 @@
-public class Audio extends ElementoMultimediale{
+import Interface.Luminosita;
+import Interface.Play;
+import Interface.Volume;
+
+public class Audio extends ElementoMultimediale implements Volume, Play {
 
     int durata;
     int volume;
@@ -10,7 +14,10 @@ public class Audio extends ElementoMultimediale{
         this.volume = volume;
     }
 
-    public void play() {
+
+
+    @Override
+    public void Play() {
         for(int i=0; i < this.durata; i++) {
         System.out.print(this.titolo);
             for (int j = 0; j < this.volume; j++) {
@@ -18,14 +25,16 @@ public class Audio extends ElementoMultimediale{
         }
             System.out.println();
         }
-
     }
 
-    public void abbassaVolume () {
+
+    @Override
+    public void abbassaVolume() {
         this.volume --;
     }
-    public void alzaVolume () {
+
+    @Override
+    public void alzaVolume() {
         this.volume ++;
     }
-
 }
