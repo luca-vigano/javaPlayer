@@ -17,7 +17,7 @@ public abstract class ElementoMultimediale{
             a.Play();
             System.out.println("vuoi alzare(up) abbassare(down) il volume?");
             String command = s.nextLine();
-            if (command == "up") {
+            if (command.equals("up") ) {
                 a.alzaVolume();
             } else {
              a.abbassaVolume();
@@ -28,7 +28,7 @@ public abstract class ElementoMultimediale{
             v.Play();
             System.out.println("vuoi alzare(up) abbassare(down) il volume?");
             String command = s.nextLine();
-            if (command == "up") {
+            if (command.equals("up") ) {
                 v.alzaVolume();
             } else {
                 v.abbassaVolume();
@@ -36,7 +36,7 @@ public abstract class ElementoMultimediale{
             v.Play();
             System.out.println("vuoi alzare(up) abbassare(down) la luminosità?");
              command = s.nextLine();
-            if (command == "up") {
+            if (command.equals("up")) {
                 v.aumentaLuminosita();
             } else {
                 v.diminuisciLuminosita();
@@ -48,7 +48,7 @@ public abstract class ElementoMultimediale{
             i.Show();
             System.out.println("vuoi alzare(up) abbassare(down) la luminosità?");
             String command = s.nextLine();
-            if (command == "up") {
+            if (command.equals("up")) {
                 i.aumentaLuminosita();
             } else {
                 i.diminuisciLuminosita();
